@@ -1,0 +1,19 @@
+package jio.System.Drawing;import Common.Activation;import static Common.Helper.Convert;import static Common.Helper.getGetObjectName;import static Common.Helper.getReturnObjectName;import static Common.Helper.ConvertToConcreteInterfaceImplementation;import Common.Helper;import com.javonet.Javonet;
+                        import com.javonet.JavonetException;
+                        import com.javonet.JavonetFramework;
+                        import com.javonet.api.NObject;
+                        import com.javonet.api.NEnum;
+                        import com.javonet.api.keywords.NRef;
+                        import com.javonet.api.keywords.NOut;
+                        import com.javonet.api.NControlContainer;import java.util.concurrent.atomic.AtomicReference;import jio.System.Drawing.*;
+import jio.System.*;
+import jio.System.IO.*;
+import jio.System.Drawing.Imaging.*;public class Bitmap {public NObject javonetHandle; public Bitmap (java.lang.String filename){ try {  javonetHandle = Javonet.New("Bitmap",filename);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (java.lang.String filename,java.lang.Boolean useIcm){ try {  javonetHandle = Javonet.New("Bitmap",filename,useIcm);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (Class type,java.lang.String resource){ try {  javonetHandle = Javonet.New("Bitmap",Javonet.getType(getReturnObjectName(type).getTypeName()),resource);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (Stream stream){ try {  javonetHandle = Javonet.New("Bitmap",stream);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (Stream stream,java.lang.Boolean useIcm){ try {  javonetHandle = Javonet.New("Bitmap",stream,useIcm);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (java.lang.Integer width,java.lang.Integer height,java.lang.Integer stride,PixelFormat format,java.lang.Integer scan0){ try {  javonetHandle = Javonet.New("Bitmap",width,height,stride,NEnum.fromJavaEnum(format),scan0);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (java.lang.Integer width,java.lang.Integer height,PixelFormat format){ try {  javonetHandle = Javonet.New("Bitmap",width,height,NEnum.fromJavaEnum(format));} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (java.lang.Integer width,java.lang.Integer height){ try {  javonetHandle = Javonet.New("Bitmap",width,height);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (java.lang.Integer width,java.lang.Integer height,Graphics g){ try {  javonetHandle = Javonet.New("Bitmap",width,height,g);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (Image original){ try {  javonetHandle = Javonet.New("Bitmap",original);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (Image original,java.lang.Integer width,java.lang.Integer height){ try {  javonetHandle = Javonet.New("Bitmap",original,width,height);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap (Image original,Size newSize){ try {  javonetHandle = Javonet.New("Bitmap",original,newSize);} catch (JavonetException _javonetException) { _javonetException.printStackTrace(); } }public Bitmap(NObject handle) {this.javonetHandle=handle;}public void setJavonetHandle(NObject handle) {
+                    this.javonetHandle = handle;
+                }	static {
+		try {
+			Activation.initializeJavonet();
+		} catch (java.lang.Exception e) {
+			e.printStackTrace();
+		}
+	}}
